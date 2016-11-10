@@ -1,3 +1,33 @@
 <resources>
-    <string name="app_name">TestTutor</string>
+    <string name="app_name">TutorApp</string>
+    <string name="login">Login</string>
+    <string name="userName">User Name</string>
+    <string name="password">Password</string>
+    <string name="newAccount">Create an Account</string>
+    <string name="info">More Info</string>
+    <string name="contact">Contact</string>
+
+    <string-array name="people">
+        <item>Person 1</item>
+        <item>Person 2</item>
+        <item>Person 3</item>
+        <item>Person 4</item>
+        <item>Person 5</item>
+        <item>Person 6</item>
+        <item>Person 7</item>
+        <item>Person 8</item>
+        <item>Person 9</item>
+        <item>Person 10</item>
+        <item>Person 11</item>
+        <item>Person 12</item>
+        <item>Person 13</item>
+        <item>Person 14</item>
+        <item>Person 15</item>
+        <item>Person 16</item>
+        <item>Person 17</item>
+        <item>Person 18</item>
+        <item>Person 19</item>
+        <item>Person 20</item>
+    </string-array>
+
 </resources>
