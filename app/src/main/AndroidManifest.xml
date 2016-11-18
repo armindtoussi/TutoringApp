@@ -15,7 +15,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".UserView" />
+        <activity android:name=".UserView"></activity>
         <activity android:name=".CreateAccountView"></activity>
     </application>
 
