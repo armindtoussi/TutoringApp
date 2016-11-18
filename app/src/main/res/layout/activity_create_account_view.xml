@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_create_account_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.armint.testtutor.CreateAccountView">
+
+    <TextView
+        android:text="Create Account"
+        android:textSize="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/accTitle"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Confirm Password: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/newPasswordConfirm"
+        android:layout_below="@+id/newPassword"
+        android:layout_alignLeft="@+id/accTitle"
+        android:layout_alignStart="@+id/accTitle"
+        android:layout_marginTop="28dp"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="*****"
+        android:id="@+id/enterNewPasswordConfirm"
+        android:textColorHint="@color/text_hint"
+        android:textSize="20dp"
+        android:layout_alignBaseline="@+id/newPasswordConfirm"
+        android:layout_alignBottom="@+id/newPasswordConfirm"
+        android:layout_alignLeft="@+id/enterName" />
+
+    <TextView
+        android:text="Password: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:id="@+id/newPassword"
+        android:layout_below="@+id/newBadCourses"
+        android:layout_alignRight="@+id/newPasswordConfirm"
+        android:layout_alignEnd="@+id/newPasswordConfirm"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="*****"
+        android:id="@+id/enterNewPassword"
+        android:textColorHint="@color/text_hint"
+        android:textSize="20dp"
+        android:layout_alignBaseline="@+id/newPassword"
+        android:layout_alignBottom="@+id/newPassword"
+        android:layout_alignLeft="@+id/enterName" />
+
+    <TextView
+        android:text="Bad Courses: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:id="@+id/newBadCourses"
+        android:layout_below="@+id/newGoodCourses"
+        android:layout_alignRight="@+id/newPassword"
+        android:layout_alignEnd="@+id/newPassword"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="Ex. English"
+        android:id="@+id/enterBadCourse1"
+        android:textColorHint="@color/text_hint"
+        android:textSize="20dp"
+        android:layout_alignBaseline="@+id/newBadCourses"
+        android:layout_alignBottom="@+id/newBadCourses"
+        android:layout_alignLeft="@+id/enterName" />
+
+    <TextView
+        android:text="Good Courses: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:id="@+id/newGoodCourses"
+        android:layout_below="@+id/newEmail"
+        android:layout_alignRight="@+id/newBadCourses"
+        android:layout_alignEnd="@+id/newBadCourses"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="Ex. Math"
+        android:id="@+id/enterGoodCourse1"
+        android:textColorHint="@color/text_hint"
+        android:textSize="20dp"
+        android:layout_alignBaseline="@+id/newGoodCourses"
+        android:layout_alignBottom="@+id/newGoodCourses"
+        android:layout_alignLeft="@+id/enterName" />
+
+    <TextView
+        android:text="Email: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:id="@+id/newEmail"
+        android:layout_below="@+id/newUserName"
+        android:layout_alignRight="@+id/newGoodCourses"
+        android:layout_alignEnd="@+id/newGoodCourses"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="Ex. r@gmail.com"
+        android:id="@+id/enterEmail"
+        android:textColorHint="@color/text_hint"
+        android:textSize="20dp"
+        android:layout_alignBaseline="@+id/newEmail"
+        android:layout_alignBottom="@+id/newEmail"
+        android:layout_alignLeft="@+id/enterName" />
+
+    <TextView
+        android:text="Username: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:id="@+id/newUserName"
+        android:layout_below="@+id/newName"
+        android:layout_alignRight="@+id/newEmail"
+        android:layout_alignEnd="@+id/newEmail"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="Ex. Ryan123"
+        android:id="@+id/enterUserName"
+        android:textColorHint="@color/text_hint"
+        android:textSize="20dp"
+        android:layout_alignBaseline="@+id/newUserName"
+        android:layout_alignBottom="@+id/newUserName"
+        android:layout_alignLeft="@+id/enterName" />
+
+    <TextView
+        android:text="Name: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:id="@+id/newName"
+        android:layout_below="@+id/accTitle"
+        android:layout_alignRight="@+id/newUserName"
+        android:layout_alignEnd="@+id/newUserName"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="Ex. Ryan Mackay"
+        android:textColorHint="@color/text_hint"
+        android:textSize="20dp"
+        android:id="@+id/enterName"
+        android:layout_alignBaseline="@+id/newName"
+        android:layout_alignBottom="@+id/newName"
+        android:layout_alignRight="@+id/accTitle"
+        android:layout_alignEnd="@+id/accTitle" />
+
+    <Button
+        android:text="Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cancelButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/newPassword"
+        android:layout_alignStart="@+id/newPassword"
+        android:onClick="cancel" />
+
+    <Button
+        android:text="Make Account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/makeAccountButton"
+        android:layout_alignBaseline="@+id/cancelButton"
+        android:layout_alignBottom="@+id/cancelButton"
+        android:layout_toRightOf="@+id/newPasswordConfirm"
+        android:layout_toEndOf="@+id/newPasswordConfirm"
+        android:onClick="createAccount" />
+</RelativeLayout>
