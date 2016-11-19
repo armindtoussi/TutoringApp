@@ -1,11 +1,36 @@
 <resources>
     <string name="app_name">TutorApp</string>
     <string name="login">Login</string>
-    <string name="userName">User Name</string>
+    <string name="userName">Username</string>
     <string name="password">Password</string>
     <string name="newAccount">Create an Account</string>
     <string name="info">More Info</string>
     <string name="contact">Contact</string>
+    <string name="createAcc">Create Account</string>
+    <string name="passConfirm">Confirm Password: </string>
+    <string name="passHint">*****</string>
+    <string name="pass">Password:</string>
+    <string name="badCrs">Bad Courses: </string>
+    <string name="goodCrs">Good Courses: </string>
+    <string name="crsGoodEx">Ex. English</string>
+    <string name="crsBadEx">Ex. Math</string>
+    <string name="email">Email: </string>
+    <string name="emailHint">Ex. r@gmail.com</string>
+    <string name="uName">Username: </string>
+    <string name="uNameHint">Ex. Ryan123</string>
+    <string name="name">Name: </string>
+    <string name="nameHint">Ex. Ryan Mackay</string>
+    <string name="btnCancel">Cancel</string>
+    <string name="makeAcc">Make Account</string>
+
+    <!--validation strings-->
+    <string name="invalName">Invalid Name</string>
+    <string name="invalEmail">Invalid Email</string>
+    <string name="invalGCrs">Invalid Good Course</string>
+    <string name="invalBCrs">Invalid Bad Course</string>
+    <string name="invalPWord">Password must contain at least one symbol, one digit, one capital letter, and a length of at least 6</string>
+    <string name="passMatch">Passwords must match exactly</string>
+    <!--validation strings end here -->
 
     <string-array name="people">
         <item>Person 1</item>
