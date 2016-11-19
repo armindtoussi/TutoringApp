@@ -20,6 +20,6 @@
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/optionTitle"
-        android:id="@+id/optionList" />
+        android:id="@android:id/list" />
 
 </RelativeLayout>

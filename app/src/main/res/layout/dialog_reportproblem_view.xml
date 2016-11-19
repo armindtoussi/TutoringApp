@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:text="Report a Problem"
+        android:textSize="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/reportProblem"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="125"
+        android:layout_below="@+id/reportProblem"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:id="@+id/editText" />
+
+    <Button
+        android:text="Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/reportProblemCancel"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/editText"
+        android:layout_alignLeft="@+id/reportProblem"
+        android:layout_alignStart="@+id/reportProblem" />
+
+    <Button
+        android:text="Enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/reportProblemEnter"
+        android:layout_alignBaseline="@+id/reportProblemCancel"
+        android:layout_alignBottom="@+id/reportProblemCancel"
+        android:layout_alignRight="@+id/reportProblem"
+        android:layout_alignEnd="@+id/reportProblem" />
+
+</RelativeLayout>

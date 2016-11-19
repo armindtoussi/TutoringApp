@@ -1,6 +1,9 @@
 package com.example.armint.testtutor;
 
 import android.app.Activity;
+import android.app.Dialog;
+import android.content.Intent;
+import android.support.v4.app.ListFragment;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -8,19 +11,22 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 
-public class OptionsViewFrag extends Fragment {
+public class OptionsViewFrag extends ListFragment {
 
     // Variables for attempted ListView options ListView population.
-    /*
+
     private ArrayAdapter<String> optionsAdapter;
     private ArrayList<String> options;
-    private ListView lv; */
 
     //Required ctor.
     public OptionsViewFrag() {
@@ -31,18 +37,14 @@ public class OptionsViewFrag extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
-        // At this current moment, this code does not break anything, but it also does it do its
-        // required function of populating the options ListView. I tried to understand and implement
-        // this based off of other ListView but didn't quite get it. I must now move onto other things,
-        // we can discuss on this week.
-        /*
-        LayoutInflater inflater = (LayoutInflater) getActivity().getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
-        View view = inflater.inflate(R.layout.fragment_options_view, null);
 
-        lv = (ListView)view.findViewById(R.id.optionList);
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
         options = new ArrayList<String>();
-        options.add("Invite Friends");
         options.add("Report a problem");
         options.add("Edit Profile");
         options.add("Change Password");
@@ -50,8 +52,8 @@ public class OptionsViewFrag extends Fragment {
 
         optionsAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, options);
 
-        lv.setAdapter(optionsAdapter); */
-
+        setListAdapter(optionsAdapter);
+        getListView().setOnItemClickListener(listHandler);
     }
 
     @Override
@@ -59,5 +61,66 @@ public class OptionsViewFrag extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_options_view, container, false);
+    }
+
+    private AdapterView.OnItemClickListener listHandler = new AdapterView.OnItemClickListener(){
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            //Toast.makeText(getActivity(), "Item: " + position, Toast.LENGTH_SHORT).show();
+
+            switch (position) {
+                case 0:
+                    reportProblem();
+                    break;
+                case 2:
+                    changePassword();
+                    break;
+                case 3:
+                    getActivity().finish();
+                    break;
+            }
+        }
+    };
+
+    private void changePassword() {
+        final Dialog dialog = new Dialog(getContext());
+        dialog.setContentView(R.layout.dialog_changepassword_view);
+
+        Button cancelButton = (Button) dialog.findViewById(R.id.changePasswordCancel);
+        Button enterButton  = (Button) dialog.findViewById(R.id.changePasswordEnter);
+
+        WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+        lp.copyFrom(dialog.getWindow().getAttributes());
+        lp.width   = WindowManager.LayoutParams.MATCH_PARENT;
+
+        cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View view) {
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
+        dialog.getWindow().setAttributes(lp);
+    }
+
+    private void reportProblem() {
+        final Dialog dialog = new Dialog(getContext());
+        dialog.setContentView(R.layout.dialog_reportproblem_view);
+
+        Button cancelButton = (Button) dialog.findViewById(R.id.reportProblemCancel);
+
+        WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+        lp.copyFrom(dialog.getWindow().getAttributes());
+        lp.width  = WindowManager.LayoutParams.MATCH_PARENT;
+
+        cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View view) {
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
+        dialog.getWindow().setAttributes(lp);
+
     }
 }
