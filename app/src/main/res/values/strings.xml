@@ -6,6 +6,14 @@
     <string name="newAccount">Create an Account</string>
     <string name="info">More Info</string>
     <string name="contact">Contact</string>
+    <string name="changepassword">Change Password</string>
+    <string name="oldpassword">Old Password</string>
+    <string name="hint">*****</string>
+    <string name="newpassword">New Password</string>
+    <string name="confirmnewpassword">Confirm New Password</string>
+    <string name="enter">Enter</string>
+    <string name="cancel">Cancel</string>
+    <string name="report">Report a Problem</string>
 
     <string-array name="people">
         <item>Person 1</item>
