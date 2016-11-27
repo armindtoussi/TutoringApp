@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_edit_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.armint.testtutor.EditProfile">
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/profileTitle"
+            android:text="@string/edit"
+            android:textColor="@color/text_black"
+            android:gravity="center"
+            android:textSize="50sp"
+            android:layout_marginBottom="20dp"/>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_black"
+                android:id="@+id/editName"
+                android:text="@string/name"
+                android:textSize="20sp" />
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/newName" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_black"
+                android:id="@+id/editUName"
+                android:text="@string/uName"
+                android:textSize="20sp" />
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/newUName" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_black"
+                android:id="@+id/editEmail"
+                android:text="@string/email"
+                android:textSize="20sp" />
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/newEmail" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_black"
+                android:id="@+id/editGdCrs"
+                android:text="@string/goodCrs"
+                android:textSize="20sp" />
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/newGoodCrs" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_black"
+                android:id="@+id/editBdCrs"
+                android:text="@string/badCrs"
+                android:textSize="20sp" />
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/newBadCrs" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_black"
+                android:id="@+id/editDescription"
+                android:text="@string/description"
+                android:textSize="20sp" />
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/newDescription"
+                android:maxWidth="200dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:text="@string/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cancelButton"
+                android:onClick="cancel"/>
+
+            <Button
+                android:text="@string/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/saveChanges"/>
+        </TableRow>
+
+    </TableLayout>
+</ScrollView>
