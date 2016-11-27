@@ -90,11 +90,13 @@ public class CreateAccountView extends AppCompatActivity {
 
                 if (!isValidPassword(valPass1))
                     password.setError(getString(R.string.invalPWord));
+
                 ///need something tocheck that passwords match, i tried but failed
                 // intially and now i jsut wanna work on someting else so im just doing this for now.
                 // so i can work on IS.
 
-                if(isValidName(valName) && isValidEmail(valEmail)
+                if(isValidName(valName)
+                        && isValidEmail(valEmail)
                         && isValidCourse(valGdCrs)
                         && isValidCourse(valBdCrs)
                         && isValidPassword(valPass1)) {
@@ -164,10 +166,10 @@ public class CreateAccountView extends AppCompatActivity {
         return matcher.matches();
     }
 
-//    private boolean doPasswordsMatch(String passOne, String passTwo) {
-//        if(!passOne.equals(passTwo)) {
-//            return false;
-//        }
-//        return true;
-//    }
+    private boolean doPasswordsMatch(String passOne, String passTwo) {
+        if(!passOne.equals(passTwo)) {
+            return false;
+        }
+        return true;
+    }
 }

@@ -3,11 +3,13 @@ package com.example.armint.testtutor;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -19,6 +21,7 @@ public class TutorArrayAdapter extends ArrayAdapter<String> {
     private Context  context;
     private String[] people;
     private String[] description;
+    private Intent intent;
 
     public TutorArrayAdapter(Context context, int resource, String[] people, String[] description) {
         super(context, resource, people);

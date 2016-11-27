@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".UserView" />
-        <activity android:name=".CreateAccountView"></activity>
+        <activity android:name=".CreateAccountView" />
+        <activity android:name=".MoreInfo" />
     </application>
 
 </manifest>
