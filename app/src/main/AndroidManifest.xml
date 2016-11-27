@@ -18,6 +18,7 @@
         <activity android:name=".UserView" />
         <activity android:name=".CreateAccountView" />
         <activity android:name=".MoreInfo" />
+        <activity android:name=".EditProfile"></activity>
     </application>
 
 </manifest>

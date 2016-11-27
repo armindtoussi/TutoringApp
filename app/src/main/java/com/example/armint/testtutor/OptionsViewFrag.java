@@ -72,6 +72,9 @@ public class OptionsViewFrag extends ListFragment {
                 case 0:
                     reportProblem();
                     break;
+                case 1:
+                    editProfile();
+                    break;
                 case 2:
                     changePassword();
                     break;
@@ -81,6 +84,13 @@ public class OptionsViewFrag extends ListFragment {
             }
         }
     };
+
+    private void editProfile() {
+        final Intent intent;
+
+        intent = new Intent(getActivity(), EditProfile.class);
+        startActivity(intent);
+    }
 
     private void changePassword() {
         final Dialog dialog = new Dialog(getContext());

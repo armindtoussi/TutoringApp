@@ -1,11 +1,19 @@
 <resources>
     <string name="app_name">TutorApp</string>
+
+    <!--Login page strings -->
     <string name="login">Login</string>
     <string name="userName">User Name</string>
     <string name="password">Password</string>
     <string name="newAccount">Create an Account</string>
+    <!-- login page  strings end -->
+
+    <!--main view strings -->
     <string name="info">More Info</string>
     <string name="contact">Contact</string>
+    <!-- end main view strings -->
+
+    <!--options tab strings  -->
     <string name="changepassword">Change Password</string>
     <string name="oldpassword">Old Password</string>
     <string name="hint">*****</string>
@@ -14,6 +22,9 @@
     <string name="enter">Enter</string>
     <string name="cancel">Cancel</string>
     <string name="report">Report a Problem</string>
+    <!-- options tab strings end -->
+
+    <!-- Create account page strings -->
     <string name="createAcc">Create Account</string>
     <string name="passConfirm">Confirm Password: </string>
     <string name="passHint">*****</string>
@@ -31,6 +42,13 @@
     <string name="btnCancel">Cancel</string>
     <string name="makeAcc">Make Account</string>
 
+    <!-- Create account page strings end here -->
+
+    <!--edit profile page strings -->
+    <string name="edit">Edit Profile</string>
+    <string name="description">Description:</string>
+    <string name="save">Save</string>
+    <!-- edit profile page strings end here -->
 
     <!--validation strings-->
     <string name="invalName">Invalid Name</string>
