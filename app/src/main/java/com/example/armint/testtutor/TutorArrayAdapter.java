@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by Armin T on 2016-11-02.
@@ -29,6 +30,8 @@ public class TutorArrayAdapter extends ArrayAdapter<String> {
         this.description = description;
         this.context     = context;
         this.people      = people;
+
+
     }
 
     public View getView(int position, View converView, ViewGroup parent) {
@@ -40,6 +43,16 @@ public class TutorArrayAdapter extends ArrayAdapter<String> {
         ImageView image = (ImageView)view.findViewById(R.id.icon);
         TextView text  = (TextView)view.findViewById(R.id.title);
         TextView descrip = (TextView)view.findViewById(R.id.descrip);
+        Button moreInfo = (Button)view.findViewById(R.id.moreInfo);
+
+        moreInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getContext(), "Button clicked", Toast.LENGTH_LONG).show();
+                intent = new Intent(view.getContext(), MoreInfo.class);
+                view.getContext().startActivity(intent);
+            }
+        });
 
         text.setText(person);
         descrip.setText(info);

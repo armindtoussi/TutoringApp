@@ -75,7 +75,7 @@ public class TutoreeViewFrag extends ListFragment {
 
         TutorArrayAdapter adapter = new TutorArrayAdapter(getActivity(), 0, people, descrip);
         setListAdapter(adapter);
-        getListView().setOnItemClickListener(listHandler);
+        //getListView().setOnItemClickListener(listHandler);
     }
 
     //adpater for the listview. detects clicks and sich
