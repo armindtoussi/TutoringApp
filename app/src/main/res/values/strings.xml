@@ -41,7 +41,8 @@
     <string name="nameHint">Ex. Ryan Mackay</string>
     <string name="btnCancel">Cancel</string>
     <string name="makeAcc">Make Account</string>
-
+    <string name="userInfo">Thanks for making an account, if you have a sec go to edit profile in
+        options to give your profile a description about you.</string>
     <!-- Create account page strings end here -->
 
     <!--edit profile page strings -->
@@ -55,7 +56,8 @@
     <string name="invalEmail">Invalid Email</string>
     <string name="invalGCrs">Invalid Good Course</string>
     <string name="invalBCrs">Invalid Bad Course</string>
-    <string name="invalPWord">Password must contain at least one symbol, one digit, one capital letter, and a length of at least 6</string>
+    <string name="invalPWord">Password must contain at least one symbol, one digit, one capital
+        letter, and a length of at least 6</string>
     <string name="passMatch">Passwords must match exactly</string>
     <!--validation strings end here -->
 
@@ -63,6 +65,12 @@
     <string name="good">Adept Courses:</string>
     <string name="bad">Deficient Courses:</string>
     <!--More Information Page Strings end here -->
+
+    <!--contact person text message -->
+    <string name="sms">would like to help tutor you or be tutor by you, contact them at:</string>
+    <string name="sent">Message Sent</string>
+    <string name="fail">Message was NOT sent, try again.</string>
+    <!--end of text message message-->
 
     <string name="tempdescrip">This is a temporary description to describe how fucking awesome
         this person is.  This is where the descrption would go if it existed. meaning if someone

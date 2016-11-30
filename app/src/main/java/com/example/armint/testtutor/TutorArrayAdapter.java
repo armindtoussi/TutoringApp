@@ -1,10 +1,15 @@
 package com.example.armint.testtutor;
 
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.telephony.SmsManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +24,7 @@ import android.widget.Toast;
  */
 
 public class TutorArrayAdapter extends ArrayAdapter<String> {
+
     private Context  context;
     private String[] people;
     private String[] description;
@@ -42,15 +48,16 @@ public class TutorArrayAdapter extends ArrayAdapter<String> {
 
 
 
-        ImageView image = (ImageView)view.findViewById(R.id.icon);
-        TextView text  = (TextView)view.findViewById(R.id.title);
+        ImageView image  = (ImageView)view.findViewById(R.id.icon);
+        TextView text    = (TextView)view.findViewById(R.id.title);
         TextView descrip = (TextView)view.findViewById(R.id.descrip);
-        Button moreInfo = (Button)view.findViewById(R.id.moreInfo);
+        Button moreInfo  = (Button)view.findViewById(R.id.moreInfo);
+        Button contact   = (Button)view.findViewById(R.id.contact);
 
         moreInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getContext(), people[position], Toast.LENGTH_LONG).show();
+
                 intent = new Intent(view.getContext(), MoreInfo.class);
                 intent.putExtra("person", people[position]);
                 intent.putExtra("descript", description[position]);
@@ -58,8 +65,33 @@ public class TutorArrayAdapter extends ArrayAdapter<String> {
             }
         });
 
+        contact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendSMSMessage(people[position], "6048090795", "6043404297");//dummy data, will get from clicked object.
+            }
+
+        });
+
         text.setText(person);
         descrip.setText(info);
         return view;
+    }
+
+    private void sendSMSMessage(String name, String phoneNo, String userPhoneNo) {
+        final String message;
+        message = name + " " + getContext().getResources().getString(R.string.sms)
+                       + " " + userPhoneNo;
+
+        try {
+            SmsManager sm = SmsManager.getDefault();
+            sm.sendTextMessage(phoneNo, null, message, null, null);
+            Toast.makeText(getContext(), getContext().getResources()
+                    .getString(R.string.sent), Toast.LENGTH_LONG).show();
+        } catch (Exception ex) {
+            Toast.makeText(getContext(), getContext().getResources()
+                    .getString(R.string.fail), Toast.LENGTH_LONG).show();
+            ex.printStackTrace();
+        }
     }
 }
