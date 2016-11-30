@@ -34,11 +34,13 @@ public class TutorArrayAdapter extends ArrayAdapter<String> {
 
     }
 
-    public View getView(int position, View converView, ViewGroup parent) {
+    public View getView(final int position, View converView, ViewGroup parent) {
         String person      = people[position];
         String info        = description[position];
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.list_item_layout, null);
+
+
 
         ImageView image = (ImageView)view.findViewById(R.id.icon);
         TextView text  = (TextView)view.findViewById(R.id.title);
@@ -48,8 +50,10 @@ public class TutorArrayAdapter extends ArrayAdapter<String> {
         moreInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getContext(), "Button clicked", Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), people[position], Toast.LENGTH_LONG).show();
                 intent = new Intent(view.getContext(), MoreInfo.class);
+                intent.putExtra("person", people[position]);
+                intent.putExtra("descript", description[position]);
                 view.getContext().startActivity(intent);
             }
         });
