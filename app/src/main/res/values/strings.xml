@@ -41,7 +41,8 @@
     <string name="nameHint">Ex. Ryan Mackay</string>
     <string name="btnCancel">Cancel</string>
     <string name="makeAcc">Make Account</string>
-
+    <string name="userInfo">Thanks for making an account, if you have a sec go to edit profile in
+        options to give your profile a description about you.</string>
     <!-- Create account page strings end here -->
 
     <!--edit profile page strings -->
@@ -55,32 +56,23 @@
     <string name="invalEmail">Invalid Email</string>
     <string name="invalGCrs">Invalid Good Course</string>
     <string name="invalBCrs">Invalid Bad Course</string>
-    <string name="invalPWord">Password must contain at least one symbol, one digit, one capital letter, and a length of at least 6</string>
+    <string name="invalPWord">Password must contain at least one symbol, one digit, one capital
+        letter, and a length of at least 6</string>
     <string name="passMatch">Passwords must match exactly</string>
     <!--validation strings end here -->
 
+    <!--More Information Page Strings-->
+    <string name="good">Adept Courses:</string>
+    <string name="bad">Deficient Courses:</string>
+    <!--More Information Page Strings end here -->
 
-    <string-array name="people">
-        <item>Person 1</item>
-        <item>Person 2</item>
-        <item>Person 3</item>
-        <item>Person 4</item>
-        <item>Person 5</item>
-        <item>Person 6</item>
-        <item>Person 7</item>
-        <item>Person 8</item>
-        <item>Person 9</item>
-        <item>Person 10</item>
-        <item>Person 11</item>
-        <item>Person 12</item>
-        <item>Person 13</item>
-        <item>Person 14</item>
-        <item>Person 15</item>
-        <item>Person 16</item>
-        <item>Person 17</item>
-        <item>Person 18</item>
-        <item>Person 19</item>
-        <item>Person 20</item>
-    </string-array>
+    <!--contact person text message -->
+    <string name="sms">would like to help tutor you or be tutor by you, contact them at:</string>
+    <string name="sent">Message Sent</string>
+    <string name="fail">Message was NOT sent, try again.</string>
+    <!--end of text message message-->
 
+    <string name="tempdescrip">This is a temporary description to describe how fucking awesome
+        this person is.  This is where the descrption would go if it existed. meaning if someone
+        decided to go into edit profile and add a description.</string>
 </resources>

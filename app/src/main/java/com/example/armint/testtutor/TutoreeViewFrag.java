@@ -12,7 +12,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
-import static com.example.armint.testtutor.R.array.people;
 
 
 /**
@@ -75,7 +74,7 @@ public class TutoreeViewFrag extends ListFragment {
 
         TutorArrayAdapter adapter = new TutorArrayAdapter(getActivity(), 0, people, descrip);
         setListAdapter(adapter);
-        getListView().setOnItemClickListener(listHandler);
+        //getListView().setOnItemClickListener(listHandler);
     }
 
     //adpater for the listview. detects clicks and sich

@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -104,6 +105,7 @@ public class CreateAccountView extends AppCompatActivity {
                     final Person person;
 
                     person = new Person(valName, valEmail, valGdCrs, valBdCrs, valUname, valPass1);
+                    Toast.makeText(view.getContext(), getResources().getString(R.string.userInfo), Toast.LENGTH_LONG).show();
                     startActivity(intent);
                 }
             }
