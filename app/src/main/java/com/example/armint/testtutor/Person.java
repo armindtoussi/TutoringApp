@@ -16,6 +16,7 @@ public class Person {
     private String goodCourse;
     private String badCourse;
     private Account account;
+    private String description;
 
     public Person(final String name,
                   final String email,
@@ -82,6 +83,14 @@ public class Person {
         } else {
             //throw up a toast brah
         }
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
     }
 
     public void setPerson(JsonObject obj) {
