@@ -1,5 +1,7 @@
 package com.example.armint.testtutor;
 
+import com.google.gson.JsonObject;
+
 /**
  * Created by Armin T on 2016-11-26.
  */
@@ -26,6 +28,10 @@ public class Person {
         this.setBadCourse(badCourse);
         this.setGoodCourse(goodCourse);
         account = new Account(userName, password);
+
+    }
+
+    public Person() {
 
     }
 
@@ -76,5 +82,14 @@ public class Person {
         } else {
             //throw up a toast brah
         }
+    }
+
+    public void setPerson(JsonObject obj) {
+        this.setName(obj.get("name").getAsString());
+        this.setEmail(obj.get("email").getAsString());
+        this.setBadCourse(obj.get("badcourse").getAsString());
+        this.setGoodCourse(obj.get("goodcourse").getAsString());
+        this.account = new Account(obj.get("username").getAsString(),
+                obj.get("password").getAsString());
     }
 }

@@ -12,6 +12,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 import static com.example.armint.testtutor.R.array.people;
 
 
@@ -25,13 +27,20 @@ import static com.example.armint.testtutor.R.array.people;
  */
 public class TutoreeViewFrag extends ListFragment {
 
+    private DBConnection con = new DBConnection();
+
+    /*
     protected String[] people = {"Armin", "Brandon", "Justin", "D'arcy",
             "Albert", "Joanne", "Jen", "Johno",
             "Alex", "Dave", "Logan", "Iksoo",
             "anotherPerson", "SomeOtherPerson",
             "whatever", "tired", "right", "now",
-            "shit"};
+            "shit"}; */
 
+    protected String[] people = con.getNames();
+    protected String[] descrip = con.getDescription();
+
+    /*
     protected String[] descrip = {"Armin's a pretty sweet person, learn from him.",
             "Brandon's a pretty sweet person, learn from him.",
             "Justin's a pretty sweet person, learn from him.",
@@ -50,7 +59,7 @@ public class TutoreeViewFrag extends ListFragment {
             "Tired's a pretty sweet person, learn from him.",
             "Right's a pretty sweet person, learn from him.",
             "Now's a pretty sweet person, learn from him.",
-            "Shit's a pretty sweet person, learn from him."};
+            "Shit's a pretty sweet person, learn from him."}; */
 
 
     //Required ctor.
@@ -61,17 +70,28 @@ public class TutoreeViewFrag extends ListFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        con = new DBConnection();
+        people = con.getNames();
+        descrip = con.getDescription();
+        //String[][] tutoreeInfo = con.getTutoreeInfo(getContext());
+        //people = tutoreeInfo[0];
+        //descrip = tutoreeInfo[1];
         return inflater.inflate(R.layout.fragment_tutoree_view, container, false);
     }
 
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
+        //con = new DBConnection();
+        //people = con.getNames();
+        //descrip = con.getDescription();
 
         TutorArrayAdapter adapter = new TutorArrayAdapter(getActivity(), 0, people, descrip);
         setListAdapter(adapter);

@@ -24,6 +24,11 @@ import android.widget.Toast;
  * needs help, matched to a tutor.
  */
 public class TutorViewFrag extends ListFragment {
+    private DBConnection con;
+    private String[]     people;
+    private String[]     descrip;
+
+    /*
     protected String[] people = {"Armin Toussi", "Brandon Gillespie", "Justin Chun", "D'arcy Smith",
             "Albert Chen", "Joanne idunno", "Jen whateva!", "Johno robo",
             "Alex Smith", "Dave Meowmoth", "Logan Borean", "Iksoo KoreaTown",
@@ -49,7 +54,7 @@ public class TutorViewFrag extends ListFragment {
             "Tired's a pretty sweet person, learn from him.",
             "Right's a pretty sweet person, learn from him.",
             "Now's a pretty sweet person, learn from him.",
-            "Shit's a pretty sweet person, learn from him."};
+            "Shit's a pretty sweet person, learn from him."}; */
 
     //required ctor.
     public TutorViewFrag() {
@@ -73,6 +78,12 @@ public class TutorViewFrag extends ListFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        con = new DBConnection();
+        people = con.getNames();
+        descrip = con.getDescription();
+        //String[][] tutorInfo = con.getTutorInfo(getContext());
+        //people = tutorInfo[0];
+        //descrip = tutorInfo[1];
         View v = inflater.inflate(R.layout.fragment_tutor_view, container, false);
         return v;
     }
