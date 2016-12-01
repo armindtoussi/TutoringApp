@@ -14,8 +14,6 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import static com.example.armint.testtutor.R.array.people;
-
 
 /**
  * This class is the fragments that will contain "matches"
